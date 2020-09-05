@@ -4,12 +4,12 @@ public class Main {
 
     public static void main(String[] args) {
 	int myValue=10000;
-	int myMinValue=Integer.MIN_VALUE;
-	int myMaxValue=Integer.MAX_VALUE;
-        System.out.println("Integer Minimum Value:"+ myMinValue);
-        System.out.println("Integer Maximum Value:"+ myMaxValue);
-        System.out.println("Busted Minimum Value:"+ (myMinValue+1));
-        System.out.println("Busted Maximum Value:"+ (myMaxValue-1));
+	int myMinIntValue=Integer.MIN_VALUE;
+	int myMaxIntValue=Integer.MAX_VALUE;
+        System.out.println("Integer Minimum Value:"+ myMinIntValue);
+        System.out.println("Integer Maximum Value:"+ myMaxIntValue);
+        System.out.println("Busted Minimum Value:"+ (myMinIntValue+1));
+        System.out.println("Busted Maximum Value:"+ (myMaxIntValue-1));
         
         int myMaxIntTest=2_147_483_647;
 
@@ -31,8 +31,11 @@ public class Main {
             System.out.println("long Maximum Value:"+ myMaxLongValue);
 
         long bigLongLiteralValue=2_147_483_647_2434L;
-        System.out.println(bigLongLiteralValue);
-        
+            System.out.println(bigLongLiteralValue);
+
+        int myTotal=(myMinIntValue/2);
+        byte mynewByteValue=(byte)(myMinByteValue/2);
+        short myNewShortValue=(short)(myMinShortValue/2);
         
     }
 }
