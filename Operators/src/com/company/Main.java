@@ -70,5 +70,22 @@ public class Main {
         if (wasCar){
             System.out.println("WasCar is True");
         }
+        //Adding Challnge
+        double newFirstDouble=20.00;
+        double newSecondDouble=80.00;
+        double newFinalDouble=(newFirstDouble+newSecondDouble)*100;
+        System.out.println("My Total Value:"+newFinalDouble);
+
+        double Remainder=newFinalDouble % 40.00;
+        System.out.println("Remainder is:"+Remainder);
+
+        boolean challange=Remainder==0?true:false;
+        System.out.println(challange);
+        if (!challange){
+            System.out.println("Get Some Remainder");
+        }
+
+
     }
+
 }
