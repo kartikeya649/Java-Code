@@ -56,6 +56,11 @@ public class Main {
             System.out.println("Greater than second top score & less than 100");
         }
 
+        int thirdTopScore=70;
+        if(thirdTopScore >60 || thirdTopScore<secondTopScore){
+            System.out.println("Less than Second top score & greater than 60");
+        }
+
 
     }
 }
