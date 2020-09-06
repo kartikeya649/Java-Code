@@ -61,6 +61,11 @@ public class Main {
             System.out.println("Less than Second top score & greater than 60");
         }
 
+        boolean isCar=false;
+        if (!isCar){
+            System.out.println("This isn't Happen");
+        }
+
 
     }
 }
