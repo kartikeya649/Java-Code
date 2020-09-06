@@ -46,7 +46,15 @@ public class Main {
             System.out.println("I am very Scared.");
         }
 
-        
+        int topScore=80;
+        if (topScore<=100){
+            System.out.println("You got High Score!");
+        }
+
+        int secondTopScore=90;
+        if(topScore<secondTopScore && topScore<100){
+            System.out.println("Greater than second top score & less than 100");
+        }
 
 
     }
