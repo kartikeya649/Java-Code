@@ -66,6 +66,9 @@ public class Main {
             System.out.println("This isn't Happen");
         }
 
-
+        boolean wasCar=isCar?false:true;
+        if (wasCar){
+            System.out.println("WasCar is True");
+        }
     }
 }
