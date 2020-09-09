@@ -30,15 +30,27 @@ public class Main {
     }
 
     public static int calculateHighScorePosition(int playerScore){
-        if (playerScore>=1000){
+/*        if (playerScore>=1000){
             return 1;
-        }else if(playerScore>500 && playerScore<1000){
+        }else if(playerScore>=500){
             return 2;
-        }else if(playerScore>100 && playerScore<500){
+        }else if(playerScore>=100){
             return 3;
-        }else {
-            return 4;
         }
+        return 4;
+    }
+*/
+    //2nd Way
+
+        int position=4;//assuming position 4 will be returned
+             if (playerScore>=1000){
+                position= 1;
+             }else if(playerScore>=500){
+                position= 2;
+            }else if(playerScore>=100){
+                position=3;
+            }
+             return position;
     }
         public static void calculateScore(boolean gameOver,int score,int levelCompleted,int bonus){
 
