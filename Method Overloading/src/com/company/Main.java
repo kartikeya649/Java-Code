@@ -13,7 +13,7 @@ public class Main {
             System.out.println("Invalid Parameters");
         }
         calcFeetAndInchesToCentimeters(290);
-        
+
     }
     public static int calculateScore(String playerName,int score){
         System.out.println("Player "+playerName+" scored "+score+" points");
