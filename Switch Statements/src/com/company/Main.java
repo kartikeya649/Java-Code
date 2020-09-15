@@ -20,5 +20,32 @@ public class Main {
                 System.out.println("was not 1 or 2");
                 break;
         }
+        char charValue='A';
+        switch (charValue){
+            case 'A':
+                System.out.println("A is found");
+                break;
+            case 'B':
+                System.out.println("B is found");
+                break;
+            case 'C': case 'D': case 'E':
+                System.out.println(charValue+" is found");
+                break;
+            default:
+                System.out.println("Couldn't find any value");
+                break;
+        }
+        String month="July";
+        switch (month.toLowerCase()){
+            case "june":
+                System.out.println("June");
+                break;
+            case "july":
+                System.out.println("July");
+                break;
+            default:
+                System.out.println("Not Sure");
+                break;
+        }
     }
 }
