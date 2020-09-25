@@ -21,11 +21,16 @@ public class Account {
         this.customerPhoneNumber=customerPhoneNumber;
     }
 
-    public void deposit(double depositAmount){
-        this.balance+=depositAmount;
+    public Account(String customerName, String customerEmailAddress, String customerPhoneNumber) {
+        this("99999",100.55, customerName, customerEmailAddress, customerPhoneNumber);
+    }
+
+    public void deposit(double depositAmount) {
+        this.balance += depositAmount;
+        System.out.println("Deposit of " + depositAmount + " made.  New balance is " + this.balance);
     }
     public void withdrawal(double withdrawalAmount){
-        if (this.balance-withdrawalAmount<=0){
+        if (this.balance-withdrawalAmount<0){
             System.out.println("Only "+this.balance+" available,Withdrawal not processed");
         }else {
             this.balance-=withdrawalAmount;
