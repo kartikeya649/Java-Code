@@ -14,8 +14,24 @@ public class Main {
         Motherboard theMotheboard=new Motherboard("BH-90","ASUS",8,9,"v9.0");
 
         PC thePC=new PC(theCase,theMonitor,theMotheboard);
-        thePC.getMonitor().drawPixelAt(1500,1200,"red");
-        thePC.getMotherboard().loadProgram("Windows 10");
-        thePC.getTheCase().pressPowerButton();
+        thePC.powerUp();
+
+        System.out.println("#######################Challange Part########################");
+
+        Wall wall1=new Wall("East");
+        Wall wall2=new Wall("West");
+        Wall wall3=new Wall("South");
+        Wall wall4=new Wall("North");
+
+        Ceiling ceiling=new Ceiling(12,34);
+
+        Bed bed=new Bed("Fantastic",4,5,6,2);
+
+        Lamp lamp=new Lamp("Modern",false,67);
+
+        Bedroom bedroom=new Bedroom("Kartik",wall1,wall2,wall3,wall4,ceiling,bed,lamp);
+        bedroom.makeBed();
+        bedroom.getLamp().turnOn();
+
     }
 }
