@@ -20,5 +20,10 @@ public class Main {
         EnhancedPlayer player=new EnhancedPlayer("Kartik",89,"Sword");
         System.out.println("Initial health is: "+player.getHealth());
         System.out.println("################################Challange######################################");
+
+        Printer printer=new Printer(50,true);
+        System.out.println("Initial page count: "+printer.getPagesPrinted());
+        int pagesPrinted=printer.printPages(4);
+        System.out.println("Pages printed was "+pagesPrinted+" New total print count for printer: "+printer.getPagesPrinted());
     }
 }
