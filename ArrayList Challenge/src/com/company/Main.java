@@ -7,11 +7,22 @@ public class Main {
     private static MobilePhone mobilePhone=new MobilePhone("899200942");
 
     public static void main(String[] args) {
-	// write your code here
+		    // Create a program that implements a simple mobile phone with the following capabilities.
+        // Able to store, modify, remove and query contact names.
+        // You will want to create a separate class for Contacts (name and phone number).
+        // Create a master class (MobilePhone) that holds the ArrayList of Contacts
+        // The MobilePhone class has the functionality listed above.
+        // Add a menu of options that are available.
+        // Options:  Quit, print list of contacts, add new contact, update existing contact, remove contact
+        // and search/find contact.
+        // When adding or updating be sure to check if the contact already exists (use name)
+        // Be sure not to expose the inner workings of the Arraylist to MobilePhone
+        // e.g. no ints, no .get(i) etc
+        // MobilePhone should do everything with Contact objects only.
         boolean quit =false;
         startPhone();
         printActions();
-        while (quit){
+        while (!quit){
             System.out.println("\n Enter actions:(6 to show available actions).");
             int action=scanner.nextInt();
             scanner.nextLine();
@@ -54,8 +65,8 @@ public class Main {
         String name=scanner.nextLine();
         System.out.println("Enter phone number: ");
         String phone=scanner.nextLine();
-        Contact newcontact=Contact.createContact(name,phone);
-        if (mobilePhone.addNewContact(newcontact)){
+        Contact newContact=Contact.createContact(name,phone);
+        if (mobilePhone.addNewContact(newContact)){
             System.out.println("New contact added: name: "+name+", phone: "+phone);
         }else {
             System.out.println("Can't add, "+ name+" already on file");
@@ -71,9 +82,9 @@ public class Main {
             return;
         }
 
-        System.out.println("Enter new contact name: ");
+        System.out.print("Enter new contact name: ");
         String newName=scanner.nextLine();
-        System.out.println("Enter phone number: ");
+        System.out.print("Enter phone number: ");
         String newNumber=scanner.nextLine();
         Contact newContact=Contact.createContact(newName,newNumber);
         if (mobilePhone.updateContact(existingContactRecord,newContact)){
@@ -106,7 +117,7 @@ public class Main {
             System.out.println("Contact not found");
             return;
         }
-        System.out.println("Name: "+existingContactRecord+" phone no.: "+existingContactRecord.getPhoneNumber());
+        System.out.println("Name: "+existingContactRecord.getName()+" phone no.: "+existingContactRecord.getPhoneNumber());
     }
 
     private static void startPhone(){

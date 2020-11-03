@@ -16,7 +16,7 @@ public class MobilePhone {
             System.out.println("Contact is already on file.");
             return false;
         }
-        myContacts.add(Contact);
+        myContacts.add(contact);
         return true;
     }
 
@@ -34,10 +34,10 @@ public class MobilePhone {
     public boolean removeContact(Contact contact){
         int foundPosition=findContact(contact);
         if (foundPosition<0){
-            System.out.println(oldContact.getName()+", was't found");
+            System.out.println(contact.getName()+", was't found");
             return false;
         }
-        this.myContacts.set(foundPosition);
+        this.myContacts.remove(foundPosition);
         System.out.println(contact.getName()+", was deleted.");
         return true;
     }
@@ -56,7 +56,7 @@ public class MobilePhone {
         return -1;
     }
     public String queryContact(Contact contact){
-        if (findContact(contact)<=0){
+        if (findContact(contact)>=0){
             return contact.getName();
         }
         return null;
