@@ -21,6 +21,7 @@ public class Demo {
         addInOrder(placesToVisit,"Auli");
         addInOrder(placesToVisit,"Kullu");
         printList(placesToVisit);
+visit(placesToVisit);
     }
     private static void printList(LinkedList<String> linkedList){
         Iterator<String> i=linkedList.iterator();
@@ -35,13 +36,17 @@ public class Demo {
         while (stringListIterator.hasNext()){
             int comparison=stringListIterator.next().compareTo(newCity);
             if (comparison==0){
+// equal, do not add
                 System.out.println(newCity+" is already included as a destination");
                 return false;
             }else if (comparison>0){
+ // new City should appear before this one
+                // Brisbane  -> Adelaide
                 stringListIterator.previous();
                 stringListIterator.add(newCity);
                 return true;
             }else if (comparison<0){
+ // move on next city
 
             }
         }
@@ -55,7 +60,7 @@ public class Demo {
         boolean goingForward=true;
         ListIterator<String> listIterator=cities.listIterator();
 
-        if (cities.getFirst()==""){
+        if (cities.isEmpty()){
             System.out.println("No cities in the itenerary");
             return;
         }else {
@@ -88,7 +93,7 @@ public class Demo {
                     break;
 
                 case 2:
-                    if (!goingForward){
+                    if (goingForward){
                         if (listIterator.hasPrevious()){
                             listIterator.previous();
                         }
