@@ -7,6 +7,20 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
+        Player tim=new Player("Billa",23,33);
+        System.out.println(tim.toString());
+        saveObject(tim);
+
+        tim.setHitPoints(9);
+        System.out.println(tim);
+        tim.setWeapon("Sword");
+        saveObject(tim);
+        loadObject(tim);
+        System.out.println(tim);
+
+        ISaveable werewolf=new Monster("Werelof",20,40);
+        System.out.println(werewolf);
+        saveObject(werewolf);
     }
     public static ArrayList<String> readValues(){
         ArrayList<String> values=new ArrayList<String>();
@@ -31,5 +45,15 @@ public class Main {
                     break;
             }
         }
+        return values;
+    }
+    public static void saveObject(ISaveable objectToSave){
+        for (int i=0;i<objectToSave.write().size();i++){
+            System.out.println("Saving "+objectToSave.write().get(i)+" to storage device");
+        }
+    }
+    public static void loadObject(ISaveable objectToLoad){
+        ArrayList<String> values=readValues();
+        objectToLoad.read(values);
     }
 }
