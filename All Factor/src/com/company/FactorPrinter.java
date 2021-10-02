@@ -1,5 +1,5 @@
 package com.company;
-
+//Adding public class
 public class FactorPrinter {
     public static void printFactors(int number) {
         if (number < 1) {
